@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Japandi Studio Dimensions</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* Layout: an architect's spec sheet. Hero render, dimensioned plan beside the key figures, then schedules by zone and a render gallery. */
+:root{
+  --paper:#f4f0e8; --sheet:#fbf9f5; --ink:#262521; --muted:#6b675e; --rule:#dcd5c8; --oak:#a8834f; --sage:#6f7d5c;
+  --serif:Fraunces,Georgia,"Times New Roman",serif; --sans:"Instrument Sans",system-ui,-apple-system,"Segoe UI",sans-serif; --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+  --dim:#9b6a3a;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){ --paper:#171614; --sheet:#1f1d1a; --ink:#ece6da; --muted:#a49d90; --rule:#38342e; --oak:#d0a874; --sage:#a3b38c; --dim:#e0a46b; color-scheme:dark; }
+}
+:root[data-theme="dark"]{ --paper:#171614; --sheet:#1f1d1a; --ink:#ece6da; --muted:#a49d90; --rule:#38342e; --oak:#d0a874; --sage:#a3b38c; --dim:#e0a46b; color-scheme:dark; }
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:40px 64px;display:flex;flex-direction:column;gap:56px}
+.eyebrow{font-size:11.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--oak)}
+h1{font-family:var(--serif);font-weight:300;font-size:clamp(36px,5.6vw,60px);line-height:1.02;letter-spacing:-.02em;margin:8px 0 12px;text-wrap:balance}
+h1 em{font-style:italic;color:var(--sage)}
+h2{font-family:var(--serif);font-weight:400;font-size:28px;line-height:1.15;margin:0;letter-spacing:-.01em;text-wrap:balance}
+h3{font-size:13px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:0}
+p{margin:0;max-width:68ch}
+.lede{color:var(--muted);font-size:17px}
+header{display:flex;flex-direction:column;gap:4px}
+.figures{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);margin-top:20px}
+.figures div{padding:14px 16px 14px 0;display:flex;flex-direction:column;gap:2px}
+.figures div+div{padding-left:16px;border-left:1px solid var(--rule)}
+.figures b{font-family:var(--mono);font-weight:500;font-size:22px;font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+.figures span{font-size:12.5px;color:var(--muted)}
+figure{margin:0;display:flex;flex-direction:column;gap:8px}
+figure img{display:block;width:100%;height:auto;border-radius:6px;background:var(--sheet)}
+figcaption{font-size:13px;color:var(--muted)}
+.section{display:flex;flex-direction:column;gap:20px}
+.section > header{gap:6px}
+.planrow{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:32px;align-items:start}
+.plan{position:relative;background:var(--sheet);border:1px solid var(--rule);border-radius:8px;padding:10px}
+.plan .box{position:relative;aspect-ratio:1400/1600;max-width:100%}
+.plan img{position:absolute;inset:0;width:100%;height:100%;border-radius:4px}
+.plan svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.plan .dl{stroke:var(--dim);stroke-width:.012;fill:none}
+.plan .dt{fill:var(--dim);font-family:var(--mono);font-size:.17px;font-weight:500;paint-order:stroke;stroke:var(--sheet);stroke-width:.05px}
+.plan .zl{fill:none;stroke:var(--ink);stroke-width:.014;stroke-dasharray:.06 .05;opacity:.55}
+.plan .zn{fill:var(--ink);font-family:var(--sans);font-size:.15px;font-weight:600;letter-spacing:.01em;paint-order:stroke;stroke:#fbf9f5;stroke-width:.06px}
+.plan .za{fill:var(--ink);font-family:var(--mono);font-size:.13px;paint-order:stroke;stroke:#fbf9f5;stroke-width:.05px}
+.plan .walk{stroke:var(--sage);stroke-width:.03;stroke-dasharray:.1 .07;fill:none}
+.legend{display:flex;flex-direction:column;gap:18px}
+.tbl{overflow-x:auto;border:1px solid var(--rule);border-radius:8px;background:var(--sheet)}
+table{border-collapse:collapse;width:100%;min-width:560px;font-size:14px}
+th,td{text-align:left;padding:9px 14px;border-bottom:1px solid var(--rule);vertical-align:top}
+th{font-size:11.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);background:var(--paper)}
+tr:last-child td{border-bottom:0}
+td.n,th.n{font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:nowrap}
+td.sub{color:var(--muted);font-size:13px}
+tr.zone td{background:var(--paper);font-weight:600;font-size:13px;letter-spacing:.04em}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 20px}
+.note{font-size:13px;color:var(--muted);border-top:1px solid var(--rule);padding-top:16px;display:flex;flex-direction:column;gap:6px}
+.note a{color:var(--oak)}
+.key{display:flex;flex-wrap:wrap;gap:14px;font-size:13px;color:var(--muted)}
+.key i{display:inline-block;width:22px;height:0;border-top:2px solid var(--dim);vertical-align:middle;margin-right:6px}
+.key i.z{border-top:2px dashed var(--ink);opacity:.6}
+.key i.w{border-top:3px dashed var(--sage)}
+@media (max-width:860px){ .planrow,.grid2,.gallery{grid-template-columns:1fr} }
+</style>
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}</style>
+</head>
+<body>
+
+
+<div class="wrap">
+<nav style="display:flex;justify-content:flex-end"><a href="studio.html" style="color:var(--oak);font-weight:600;text-decoration:none">Open the interactive 3D studio →</a></nav>
+<header>
+  <div class="eyebrow">VCharge studio · Japandi redesign · spec sheet</div>
+  <h1>The 56 m² studio, <em>dimensioned</em></h1>
+  <p class="lede">Every measurement from the Japandi layout: room shell, openings, zones, furniture, heights and clearances. Positions are measured to each item's centre, from the left wall and from the back (window) wall, in metres.</p>
+  <div class="figures">
+    <div><b>7.00 × 8.00</b><span>internal floor, m</span></div>
+    <div><b>56.0</b><span>floor area, m²</span></div>
+    <div><b>2.60</b><span>floor to ceiling, m</span></div>
+    <div><b>8 + 4</b><span>desks + meeting seats</span></div>
+    <div><b>≈ 1.65</b><span>central walkway, m</span></div>
+  </div>
+</header>
+
+<figure>
+  <img src="overview.jpg" alt="Cutaway view of the Japandi studio from the front-right corner, showing shoji-screened CEO and CTO corners, the long team table along the windows, the lounge and the meeting room." width="1920" height="1080">
+  <figcaption>Cutaway from the entry corner. Rendered in Blender (Cycles) with photographed oak, ash, walnut, plaster, linen, tatami and marble textures.</figcaption>
+</figure>
+
+<section class="section">
+  <header><h3>Dimensioned plan</h3><h2>Plan at floor level, back wall at the top</h2></header>
+  <div class="planrow">
+    <div class="plan">
+      <div class="box">
+        <img src="plan.jpg" alt="Top-down plan render of the studio." width="1400" height="1600">
+        <svg viewBox="-4.025 -4.6 8.05 9.2" role="img" aria-label="Dimension lines over the plan">
+          <defs><marker id="t" viewBox="-1 -1 2 2" markerWidth="6" markerHeight="6" markerUnits="userSpaceOnUse" orient="auto"><path d="M-.7 .7 L.7 -.7" stroke="currentColor" stroke-width=".25" style="stroke:var(--dim)"/></marker></defs>
+          <!-- zones -->
+          <rect class="zl" x="1.0" y="-4" width="2.5" height="2.4"/>
+          <text class="zn" x="2.25" y="-1.82" text-anchor="middle">CEO study</text><text class="za" x="2.25" y="-1.67" text-anchor="middle">2.50 × 2.40 · 6.0 m²</text>
+          <rect class="zl" x="-3.5" y="-4" width="2.2" height="2.4"/>
+          <text class="zn" x="-2.4" y="-1.82" text-anchor="middle">CTO lab</text><text class="za" x="-2.4" y="-1.67" text-anchor="middle">2.20 × 2.40 · 5.3 m²</text>
+          <rect class="zl" x="-3.5" y="1.8" width="2.4" height="2.2"/>
+          <text class="zn" x="-2.3" y="2.08" text-anchor="middle">Meeting room</text><text class="za" x="-2.3" y="2.23" text-anchor="middle">2.40 × 2.20 · 5.3 m²</text>
+          <rect class="zl" x="-3.5" y="-1.3" width="2.5" height="2.8"/>
+          <text class="zn" x="-2.25" y="1.32" text-anchor="middle">Lounge</text><text class="za" x="-2.25" y="1.46" text-anchor="middle">2.50 × 2.80 · 7.0 m²</text>
+          <rect class="zl" x="0.95" y="-1.1" width="2.55" height="3.7"/>
+          <text class="zn" x="2.22" y="2.47" text-anchor="middle">Team table</text>
+          <rect class="zl" x="-1.0" y="-4" width="1.5" height="0.55"/>
+          <text class="zn" x="-0.25" y="-3.28" text-anchor="middle">Tea bar 1.50</text>
+          <!-- walkway -->
+          <path class="walk" d="M0.1 3.9 L0.1 -3.35"/>
+          <text class="za" x="0.18" y="0.2" style="fill:var(--sage)">walkway ≈ 1.65 wide · 7.45 door → tea bar</text>
+          <!-- overall width (top) -->
+          <path class="dl" d="M-3.5 -4.38 H3.5" marker-start="url(#t)" marker-end="url(#t)"/>
+          <path class="dl" d="M-3.5 -4.5 V-4.25 M3.5 -4.5 V-4.25 M0.6 -4.45 V-4.3"/>
+          <text class="dt" x="-1.45" y="-4.43" text-anchor="middle">4.10 solid wall</text>
+          <text class="dt" x="2.05" y="-4.43" text-anchor="middle">2.90 glazing</text>
+          <text class="dt" x="0" y="-4.52" text-anchor="middle" style="font-size:.15px">7.00</text>
+          <!-- overall depth (left) -->
+          <path class="dl" d="M-3.82 -4 V4" marker-start="url(#t)" marker-end="url(#t)"/>
+          <path class="dl" d="M-3.95 -4 H-3.7 M-3.95 4 H-3.7"/>
+          <text class="dt" transform="translate(-3.88 0) rotate(-90)" text-anchor="middle">8.00</text>
+          <!-- right glazing -->
+          <path class="dl" d="M3.8 -4 V4" marker-start="url(#t)" marker-end="url(#t)"/>
+          <text class="dt" transform="translate(3.92 0) rotate(90)" text-anchor="middle">8.00 glazing · 6 bays × 1.33</text>
+          <!-- door chain (bottom) -->
+          <path class="dl" d="M-3.5 4.38 H3.5" marker-start="url(#t)" marker-end="url(#t)"/>
+          <path class="dl" d="M-0.4 4.3 V4.46 M0.6 4.3 V4.46"/>
+          <text class="dt" x="-1.95" y="4.55" text-anchor="middle">3.10</text>
+          <text class="dt" x="0.1" y="4.55" text-anchor="middle">door 1.00</text>
+          <text class="dt" x="2.05" y="4.55" text-anchor="middle">2.90</text>
+          <!-- team table clearance -->
+          <path class="dl" d="M2.7 -1.0 H3.5" marker-start="url(#t)" marker-end="url(#t)"/>
+          <text class="dt" x="3.1" y="-1.06" text-anchor="middle">0.80</text>
+          <path class="dl" d="M1.5 2.32 H2.7" marker-start="url(#t)" marker-end="url(#t)"/>
+          <text class="dt" x="2.1" y="2.3" text-anchor="middle" dy="-.04">1.20</text>
+          <path class="dl" d="M1.36 -0.8 V2.2" marker-start="url(#t)" marker-end="url(#t)"/>
+          <text class="dt" transform="translate(1.31 0.7) rotate(-90)" text-anchor="middle">table 3.00</text>
+        </svg>
+      </div>
+    </div>
+    <div class="legend">
+      <div class="key"><span><i></i>dimension, m</span><span><i class="z"></i>zone boundary</span><span><i class="w"></i>clear walkway</span></div>
+      <div class="tbl"><table>
+        <thead><tr><th>Zone</th><th class="n">Size, m</th><th class="n">Area</th><th>Enclosure</th></tr></thead>
+        <tbody>
+          <tr><td>CEO study</td><td class="n">2.50 × 2.40</td><td class="n">6.0 m²</td><td>Shoji 2.40 (west) + 1.60 (south); 0.90 opening</td></tr>
+          <tr><td>CTO lab</td><td class="n">2.20 × 2.40</td><td class="n">5.3 m²</td><td>Shoji 1.60 (east) + 1.30 (south); 0.80 and 0.90 openings</td></tr>
+          <tr><td>Meeting room</td><td class="n">2.40 × 2.20</td><td class="n">5.3 m²</td><td>Shoji 2.40 (north) + 1.50 (east); 0.70 entry</td></tr>
+          <tr><td>Lounge</td><td class="n">2.50 × 2.80</td><td class="n">7.0 m²</td><td>Open, on a 2.30 × 2.40 rug</td></tr>
+          <tr><td>Team table</td><td class="n">2.55 × 3.70</td><td class="n">9.4 m²</td><td>Open, along the right-hand glazing</td></tr>
+          <tr><td>Tea bar</td><td class="n">1.50 × 0.55</td><td class="n">0.8 m²</td><td>Back wall, 2.50–4.00 from left</td></tr>
+          <tr><td>Entry storage</td><td class="n">2.40 × 0.42</td><td class="n">1.0 m²</td><td>Front wall, 4.55–6.95 from left</td></tr>
+          <tr><td>Circulation</td><td class="n">—</td><td class="n">≈ 21 m²</td><td>Walkway, door swing and access space</td></tr>
+        </tbody>
+      </table></div>
+      <p class="lede" style="font-size:14px">Zone areas add up to about 35 m² of the 56 m² floor; the rest is circulation. The team table sits 0.80 m off the glass, enough for a chair to slide out.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <header><h3>Room shell</h3><h2>Walls, openings and ceiling</h2></header>
+  <div class="tbl"><table>
+    <thead><tr><th>Element</th><th class="n">Dimensions, m</th><th>Position and notes</th></tr></thead>
+    <tbody>
+      <tr><td>Internal floor</td><td class="n">7.00 × 8.00</td><td>56.0 m². Pale oak boards 0.20 m wide, 1.20–2.40 m long, running front to back</td></tr>
+      <tr><td>Floor to ceiling</td><td class="n">2.60</td><td>Oak slat ceiling, grooves at 0.12 m centres, 0.16 m shadow gap round the edge</td></tr>
+      <tr><td>Wall thickness</td><td class="n">0.12</td><td>Limewash plaster finish</td></tr>
+      <tr><td>Entrance door</td><td class="n">1.00 × 2.20</td><td>Front wall, 3.10 m from the left wall and 2.90 m from the right. Walnut leaf 0.95 × 2.18, opens inward</td></tr>
+      <tr><td>Right-hand glazing</td><td class="n">8.00 × 2.00</td><td>Full length, 6 bays × 1.33 m. Sill 0.42 m, head 2.42 m, mullions 0.06 m</td></tr>
+      <tr><td>Back glazing</td><td class="n">2.90 × 2.00</td><td>From 4.10 m to 7.00 m from the left wall, 2 bays × 1.45 m. Same sill and head</td></tr>
+      <tr><td>Back solid wall</td><td class="n">4.10 × 2.60</td><td>Left corner to the glazing. Tea bar and CTO bookcase sit here</td></tr>
+      <tr><td>Oak batten panelling</td><td class="n">h 2.58</td><td>Front wall 3.10 + 2.90 m either side of the door; left wall 2.95 m (5.05–8.00 m from the back). Battens 0.045 × 0.035 at about 0.62 m centres; rails at 0.10, 0.92 and 2.06 m</td></tr>
+      <tr><td>Skirting</td><td class="n">0.08</td><td>Charcoal, left wall</td></tr>
+      <tr><td>Linear light slots</td><td class="n">0.14 × 7.00</td><td>Two, recessed in the ceiling, 1.60 m and 5.45 m from the left wall</td></tr>
+      <tr><td>Downlights</td><td class="n">Ø 0.12</td><td>Four: CEO desk, tea bar, CTO desk, meeting table</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section class="section">
+  <header><h3>Furniture schedule</h3><h2>Every piece, by zone</h2><p class="lede" style="font-size:14px">Size is width × depth × height. Position is the item's centre, measured from the left wall, then from the back (window) wall.</p></header>
+  <div class="tbl"><table>
+    <thead><tr><th>Item</th><th class="n">W × D × H, m</th><th class="n">From left, back</th><th>Material</th></tr></thead>
+    <tbody>
+      <tr class="zone"><td colspan="4">CEO study</td></tr>
+      <tr><td>Desk, trestle</td><td class="n">1.60 × 0.75 × 0.74</td><td class="n">5.90, 1.00</td><td>Ash</td></tr>
+      <tr><td>Desk chair, ergonomic</td><td class="n">0.66 × 0.62 × 1.12</td><td class="n">5.90, 0.45</td><td>Dark leather seat, mesh back, aluminium base</td></tr>
+      <tr><td>Guest armchairs (2)</td><td class="n">0.82 × 0.99 × 1.02</td><td class="n">5.45 / 6.35, 1.80</td><td>Oak frame, black leather cushions (Poly Haven)</td></tr>
+      <tr><td>Credenza</td><td class="n">1.60 × 0.34 × 0.45</td><td class="n">4.78, 1.15</td><td>Walnut body, fluted oak sliding doors (Poly Haven)</td></tr>
+      <tr><td>Rug</td><td class="n">2.10 × 1.90</td><td class="n">5.85, 1.15</td><td>Wool, oatmeal</td></tr>
+      <tr><td>Money tree</td><td class="n">h 1.50</td><td class="n">6.65, 0.38</td><td>Pachira, window corner</td></tr>
+      <tr class="zone"><td colspan="4">CTO lab</td></tr>
+      <tr><td>Desk, trestle</td><td class="n">1.60 × 0.75 × 0.74</td><td class="n">1.15, 1.15</td><td>Ash</td></tr>
+      <tr><td>Monitors (2)</td><td class="n">0.55 × 0.32</td><td class="n">0.85 / 1.45, 1.00</td><td>On desk, screen centre 1.20 h</td></tr>
+      <tr><td>Task chair, ergonomic</td><td class="n">0.66 × 0.62 × 1.12</td><td class="n">1.15, 1.75</td><td>Linen seat, mesh back, lumbar pad, aluminium base</td></tr>
+      <tr><td>Bookcase</td><td class="n">1.20 × 0.34 × 1.80</td><td class="n">0.65, 0.20</td><td>Oak, 4 shelves at 0.45 m</td></tr>
+      <tr><td>Writable wall</td><td class="n">1.50 × 1.10</td><td class="n">0.00, 1.40</td><td>On left wall, 0.90–2.00 m high</td></tr>
+      <tr><td>Rug</td><td class="n">2.00 × 1.80</td><td class="n">1.15, 1.25</td><td>Wool, stone grey</td></tr>
+      <tr class="zone"><td colspan="4">Tea bar</td></tr>
+      <tr><td>Counter</td><td class="n">1.50 × 0.55 × 0.86</td><td class="n">3.25, 0.28</td><td>Fluted oak</td></tr>
+      <tr><td>Counter top</td><td class="n">1.54 × 0.60 × 0.04</td><td class="n">3.25, 0.29</td><td>Marble, top at 0.90 m</td></tr>
+      <tr><td>Open shelves (2)</td><td class="n">1.50 × 0.28</td><td class="n">3.25, 0.14</td><td>Oak, at 1.55 and 1.95 m</td></tr>
+      <tr><td>Wall clock</td><td class="n">Ø 0.28</td><td class="n">3.25, 0.03</td><td>Centre 2.05 m high</td></tr>
+      <tr class="zone"><td colspan="4">Lounge</td></tr>
+      <tr><td>Sofa, curved</td><td class="n">2.05 × 0.95 × 0.74</td><td class="n">0.50, 4.10</td><td>Oatmeal velvet, brass legs (Wayfair Frankie model)</td></tr>
+      <tr><td>Lounge armchairs (2)</td><td class="n">0.82 × 0.99 × 1.02</td><td class="n">2.30, 3.40 / 4.80</td><td>Oak frame, black leather cushions (Poly Haven)</td></tr>
+      <tr><td>Coffee table</td><td class="n">1.00 × 0.50 × 0.33</td><td class="n">1.50, 4.10</td><td>Oak frame, stone top (Poly Haven)</td></tr>
+      <tr><td>Side table</td><td class="n">0.45 × 0.37 × 0.45</td><td class="n">0.40, 2.75</td><td>Oak, two shelves (Poly Haven)</td></tr>
+      <tr><td>Paper floor lamp</td><td class="n">Ø 0.40 × 1.40</td><td class="n">0.30, 5.25</td><td>Washi shade, charcoal legs</td></tr>
+      <tr><td>Ink artwork</td><td class="n">0.70 × 0.90</td><td class="n">0.00, 4.10</td><td>On left wall, centre 1.50 m</td></tr>
+      <tr><td>Rug</td><td class="n">2.30 × 2.40</td><td class="n">1.25, 4.10</td><td>Jute-linen</td></tr>
+      <tr><td>Calathea</td><td class="n">h 0.80</td><td class="n">2.05, 2.75</td><td>In pot</td></tr>
+      <tr class="zone"><td colspan="4">Team table</td></tr>
+      <tr><td>Work table</td><td class="n">3.00 × 1.20 × 0.74</td><td class="n">5.60, 4.70</td><td>Ash, runs front to back</td></tr>
+      <tr><td>Work positions (6)</td><td class="n">1.00 × 0.60</td><td class="n">3 per side</td><td>At 3.70, 4.70, 5.70 m from the back</td></tr>
+      <tr><td>Planted spine</td><td class="n">0.16 × 2.60 × 0.14</td><td class="n">5.60, 4.70</td><td>Oak trough with succulents, top 0.90 m</td></tr>
+      <tr><td>Monitors (6)</td><td class="n">0.50 × 0.29</td><td class="n">on table</td><td>One per position</td></tr>
+      <tr><td>Task chairs, ergonomic (6)</td><td class="n">0.66 × 0.62 × 1.12</td><td class="n">4.68 / 6.52</td><td>Mesh back, lumbar pad, adjustable arms; linen (aisle) and sage (window) seats</td></tr>
+      <tr><td>Washi pendants (2)</td><td class="n">Ø 0.48 × 0.36</td><td class="n">5.60, 3.90 / 5.50</td><td>Bottom at 1.67 m</td></tr>
+      <tr class="zone"><td colspan="4">Meeting room</td></tr>
+      <tr><td>Table</td><td class="n">1.40 × 0.80 × 0.74</td><td class="n">1.20, 6.90</td><td>Walnut top, ash legs</td></tr>
+      <tr><td>Chairs (4)</td><td class="n">0.46 × 0.44 × 0.80</td><td class="n">0.85 / 1.55, 6.25 / 7.55</td><td>Oak frame, linen seat</td></tr>
+      <tr><td>Tatami mat</td><td class="n">1.90 × 1.50</td><td class="n">1.20, 6.90</td><td>Rush, black border</td></tr>
+      <tr><td>Wall screen</td><td class="n">1.10 × 0.64</td><td class="n">0.00, 6.90</td><td>On left wall, centre 1.35 m</td></tr>
+      <tr><td>Pendant</td><td class="n">h 0.90 drop</td><td class="n">1.20, 6.90</td><td>White globe</td></tr>
+      <tr class="zone"><td colspan="4">Entry</td></tr>
+      <tr><td>Storage sideboard</td><td class="n">2.30 × 0.49 × 0.64</td><td class="n">5.75, 7.76</td><td>Walnut body, fluted oak sliding doors (Poly Haven)</td></tr>
+      <tr><td>Bench</td><td class="n">1.00 × 0.38 × 0.45</td><td class="n">4.75, 7.20</td><td>Walnut</td></tr>
+      <tr><td>Money tree</td><td class="n">h 1.45</td><td class="n">2.55, 7.60</td><td>Pachira, beside the door</td></tr>
+      <tr class="zone"><td colspan="4">Shoji screens (all)</td></tr>
+      <tr><td>Screen height</td><td class="n">2.10</td><td class="n">—</td><td>Oak posts 0.045 × 0.05; rails at 0.03, 0.90, 2.08 m</td></tr>
+      <tr><td>Lattice</td><td class="n">≈ 0.32 grid</td><td class="n">—</td><td>Translucent paper; 6 rows above 0.90 m</td></tr>
+      <tr><td>Total length</td><td class="n">11.80</td><td class="n">—</td><td>CEO 4.00, CTO 2.90, meeting 3.90</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section class="section">
+  <header><h3>Heights and clearances</h3><h2>Section measurements</h2></header>
+  <div class="grid2">
+    <div class="tbl"><table style="min-width:0">
+      <thead><tr><th>Height above floor</th><th class="n">m</th></tr></thead>
+      <tbody>
+        <tr><td>Coffee table</td><td class="n">0.33</td></tr>
+        <tr><td>CEO credenza</td><td class="n">0.45</td></tr>
+        <tr><td>Window sill</td><td class="n">0.42</td></tr>
+        <tr><td>Chair seats</td><td class="n">0.44–0.48</td></tr>
+        <tr><td>Desk and table tops</td><td class="n">0.74</td></tr>
+        <tr><td>Tea counter top</td><td class="n">0.90</td></tr>
+        <tr><td>Entry sideboard top</td><td class="n">0.64</td></tr>
+        <tr><td>Sofa back</td><td class="n">0.74</td></tr>
+        <tr><td>Team pendants, underside</td><td class="n">1.67</td></tr>
+        <tr><td>CTO bookcase</td><td class="n">1.80</td></tr>
+        <tr><td>Shoji screens</td><td class="n">2.10</td></tr>
+        <tr><td>Door head</td><td class="n">2.20</td></tr>
+        <tr><td>Window head</td><td class="n">2.42</td></tr>
+        <tr><td>Ceiling</td><td class="n">2.60</td></tr>
+      </tbody>
+    </table></div>
+    <div class="tbl"><table style="min-width:0">
+      <thead><tr><th>Clearance</th><th class="n">m</th></tr></thead>
+      <tbody>
+        <tr><td>Central walkway, door to tea bar (length)</td><td class="n">7.45</td></tr>
+        <tr><td>Central walkway, narrowest width</td><td class="n">≈ 1.65</td></tr>
+        <tr><td>Team table edge to glazing</td><td class="n">0.80</td></tr>
+        <tr><td>Team table edge to walkway (chair zone)</td><td class="n">≈ 0.60</td></tr>
+        <tr><td>CEO desk to back glazing (chair zone)</td><td class="n">0.63</td></tr>
+        <tr><td>CTO desk to south shoji (chair zone)</td><td class="n">0.88</td></tr>
+        <tr><td>Meeting table to shoji (each long side)</td><td class="n">0.70</td></tr>
+        <tr><td>CEO study opening</td><td class="n">0.90</td></tr>
+        <tr><td>CTO lab openings</td><td class="n">0.80 / 0.90</td></tr>
+        <tr><td>Meeting room entry</td><td class="n">0.70</td></tr>
+        <tr><td>Door swing radius</td><td class="n">0.95</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+  <p class="lede" style="font-size:14px">Two places are tight and worth checking on site: the 0.63 m behind the CEO desk (0.75 m is more comfortable) and the 0.70 m meeting-room entry (0.80 m suits most wheelchairs and deliveries).</p>
+</section>
+
+<section class="section">
+  <header><h3>Renders</h3><h2>Inside the studio</h2></header>
+  <div class="gallery">
+    <figure><img src="team.jpg" alt="Team table along the windows with six monitors, a planted oak spine and two paper pendants." width="1600" height="900" loading="lazy"><figcaption>Team table: six desks at the glazing under two washi pendants.</figcaption></figure>
+    <figure><img src="ceo.jpg" alt="CEO study seen through the shoji opening: ash desk, leather chair and money tree by the window." width="1600" height="900" loading="lazy"><figcaption>CEO study, seen through the shoji opening.</figcaption></figure>
+    <figure><img src="lounge.jpg" alt="Lounge with a curved oatmeal velvet sofa, two oak-and-leather armchairs, a coffee table and a paper floor lamp." width="1600" height="900" loading="lazy"><figcaption>Lounge: curved velvet sofa, oak-and-leather armchairs, paper floor lamp and ink artwork.</figcaption></figure>
+    <figure><img src="meeting.jpg" alt="Meeting room on a tatami mat with a walnut table, four wooden chairs and a wall screen." width="1600" height="900" loading="lazy"><figcaption>Meeting room on a tatami mat behind paper screens.</figcaption></figure>
+    <figure><img src="cto.jpg" alt="CTO lab with an ash desk, two monitors and an oak bookcase." width="1600" height="900" loading="lazy"><figcaption>CTO lab: ash desk, two screens and the oak bookcase.</figcaption></figure>
+    <figure><img src="tea.jpg" alt="Tea bar on the back wall with a fluted oak counter, marble top and open oak shelves." width="1600" height="900" loading="lazy"><figcaption>Tea bar: fluted oak counter with a marble top.</figcaption></figure>
+    <figure style="grid-column:1/-1"><img src="axo_left.jpg" alt="Cutaway view from the meeting-room corner showing the whole studio." width="1920" height="1080" loading="lazy"><figcaption>Cutaway from the meeting-room corner.</figcaption></figure>
+  </div>
+</section>
+
+<div class="note">
+  <span>Textures, lighting, plants, armchairs, cabinets and tables from Poly Haven (CC0). Sofa: “Glam Velvet Sofa” by Eric Chadwick for Wayfair, CC BY 4.0, via the Khronos glTF Sample Assets, re-covered in oatmeal. Office chairs modelled for this project. Rendered in Blender 5.2, Cycles. Measurements match the interactive 3D concept and the Figma board.</span>
+  <span>Interactive 3D: <a href="studio.html">open the 3D studio</a> · Figma: <a href="https://www.figma.com/design/I4ud8cw4xQdoapdBJZEcwX">Japandi redesign board</a></span>
+</div>
+</div>
+
+</body>
+</html>
